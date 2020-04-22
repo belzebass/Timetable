@@ -4,9 +4,11 @@ import hu.pe.mik.timetable.domain.UserEntity;
 import hu.pe.mik.timetable.repositories.UserRepository;
 import org.springframework.web.bind.annotation.*;
 
+import javax.transaction.Transactional;
 import java.util.List;
 
 @RestController
+@Transactional
 @RequestMapping("/users")
 public class UserController {
 
@@ -23,6 +25,6 @@ public class UserController {
 
     @PostMapping(value = "/add")
     public void addUser(@RequestBody UserEntity entity) {
-        System.out.println(entity);
+        System.out.println(repository.save(entity));
     }
 }
