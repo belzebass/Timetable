@@ -10,6 +10,7 @@
     <title>TimeTable register</title>
 </head>
 <body>
+
 <div class="container">
 
     <div class="row" style="alignment: center">
@@ -30,34 +31,35 @@
                 <div class="p-3 mb-2 bg-dark text-white">
                     <div class="card-body">
                         <h5 class="card-title text-center">Register</h5>
-                        <form class="form-signin" action="http://localhost:8080/users/add" method="post">
+                        <!--                        <form class="form-signin" action="http://localhost:8080/users/add" method="post" id="regForm">-->
+                        <form class="form-signin" id="regForm">
                             <div class="form-label-group">
-                                <input name ="firstName" type="text" id="firstName" class="form-control" placeholder="First name" required autofocus>
+                                <input name ="firstName" type="text" id="firstName" class="form-control" placeholder="First name" required autofocus value="asd">
                                 <label for="firstName">First name</label>
                             </div>
 
                             <div class="form-label-group">
-                                <input name="lastName" type="text" id="lastName" class="form-control" placeholder="Last name" required autofocus>
+                                <input name="lastName" type="text" id="lastName" class="form-control" placeholder="Last name" required autofocus value="helo">
                                 <label for="lastName">Last name</label>
                             </div>
 
                             <div class="form-label-group">
-                                <input name="email" type="email" id="email" class="form-control" placeholder="Email address" required autofocus>
+                                <input name="email" type="email" id="email" class="form-control" placeholder="Email address" required autofocus value="asd@helo.com">
                                 <label for="email">Email address</label>
                             </div>
 
                             <div class="form-label-group">
-                                <input name="emailVerify" type="email" id="emailVerify" class="form-control" placeholder="Verify email" required autofocus>
+                                <input name="emailVerify" type="email" id="emailVerify" class="form-control" placeholder="Verify email" required autofocus value="asd@helo.com">
                                 <label for="emailVerify">Verify email</label>
                             </div>
 
                             <div class="form-label-group">
-                                <input name="password" type="password" id="password" class="form-control" placeholder="Password" required>
+                                <input name="password" type="password" id="password" class="form-control" placeholder="Password" required value="password">
                                 <label for="password">Password</label>
                             </div>
 
                             <div class="form-label-group">
-                                <input name="passwordVerify" type="password" id="passwordVerify" class="form-control" placeholder="Verify password" required>
+                                <input name="passwordVerify" type="password" id="passwordVerify" class="form-control" placeholder="Verify password" required value="password">
                                 <label for="passwordVerify">Verify password</label>
                             </div>
 
@@ -76,5 +78,6 @@
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+<script type="text/javascript" src="static/js/reg.js" crossorigin="anonymous"></script>
 </body>
 </html>

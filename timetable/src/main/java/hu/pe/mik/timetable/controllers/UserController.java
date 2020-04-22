@@ -2,10 +2,8 @@ package hu.pe.mik.timetable.controllers;
 
 import hu.pe.mik.timetable.domain.UserEntity;
 import hu.pe.mik.timetable.repositories.UserRepository;
-import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.ArrayList;
 import java.util.List;
 
 @RestController
@@ -23,14 +21,8 @@ public class UserController {
         return repository.findAll();
     }
 
-    @PostMapping(value = "/add",
-            consumes = MediaType.APPLICATION_FORM_URLENCODED_VALUE)
-    public void addUser(@RequestParam String firstName,
-                        @RequestParam String lastName,
-                        @RequestParam String email,
-                        @RequestParam String emailVerify,
-                        @RequestParam String password,
-                        @RequestParam String passwordVerify) {
-        System.out.println(repository.save(new UserEntity(1L, firstName, lastName, email, password, new ArrayList<>())));
+    @PostMapping(value = "/add")
+    public void addUser(@RequestBody UserEntity entity) {
+        System.out.println(entity);
     }
 }
