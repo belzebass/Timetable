@@ -1,13 +1,13 @@
 window.addEventListener('load', function () {
-    var regForm = document.getElementById("regForm");
-    var firstName = document.getElementById("firstName").value;
-    var lastName = document.getElementById("lastName").value;
-    var email = document.getElementById("email").value;
-    var emailVerify = document.getElementById("emailVerify").value;
-    var password = document.getElementById("password").value;
-    var passwordVerify = document.getElementById("passwordVerify").value;
 
     function handleSubmit(e) {
+        var regForm = document.getElementById("regForm");
+        var firstName = document.getElementById("firstName").value;
+        var lastName = document.getElementById("lastName").value;
+        var email = document.getElementById("email").value;
+        var emailVerify = document.getElementById("emailVerify").value;
+        var password = document.getElementById("password").value;
+        var passwordVerify = document.getElementById("passwordVerify").value;
         e.preventDefault();
         console.log(firstName);
         console.log(lastName);
