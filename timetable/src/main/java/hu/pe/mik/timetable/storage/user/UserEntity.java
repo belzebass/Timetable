@@ -1,18 +1,20 @@
-package hu.pe.mik.timetable.domain;
+package hu.pe.mik.timetable.storage.user;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import hu.pe.mik.timetable.storage.calendar.CalendarEntity;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 import java.util.List;
+import java.util.Set;
 
-@Table(name = "Users")
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
+@Table(name = "Users")
 public class UserEntity {
 
     @Id
@@ -38,4 +40,7 @@ public class UserEntity {
                 joinColumns = @JoinColumn(name = "calendar_id", referencedColumnName = "id"),
                 inverseJoinColumns = @JoinColumn(name = "user_id", referencedColumnName = "id"))
     private List<CalendarEntity> calendars;
+
+    @ManyToMany
+    private Set<RoleEntity> roles;
 }

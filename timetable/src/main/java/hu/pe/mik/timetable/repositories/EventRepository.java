@@ -1,6 +1,6 @@
 package hu.pe.mik.timetable.repositories;
 
-import hu.pe.mik.timetable.domain.EventEntity;
+import hu.pe.mik.timetable.storage.event.EventEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

@@ -1,5 +1,6 @@
-package hu.pe.mik.timetable.domain;
+package hu.pe.mik.timetable.storage.event;
 
+import hu.pe.mik.timetable.storage.calendar.CalendarEntity;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -7,11 +8,11 @@ import lombok.NoArgsConstructor;
 import javax.persistence.*;
 import java.util.List;
 
-@Table(name = "Events")
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
+@Table(name = "Events")
 public class EventEntity {
 
     @Id

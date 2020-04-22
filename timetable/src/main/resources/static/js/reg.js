@@ -3,6 +3,7 @@ window.addEventListener('load', function () {
     var firstName = document.getElementById("firstName").value;
     var lastName = document.getElementById("lastName").value;
     var email = document.getElementById("email").value;
+    var emailVerify = document.getElementById("emailVerify").value;
     var password = document.getElementById("password").value;
     var passwordVerify = document.getElementById("passwordVerify").value;
 
@@ -11,6 +12,7 @@ window.addEventListener('load', function () {
         console.log(firstName);
         console.log(lastName);
         console.log(email);
+        console.log(emailVerify);
         console.log(password);
         console.log(passwordVerify);
 
@@ -24,13 +26,15 @@ window.addEventListener('load', function () {
                 console.log(json);
             }
         };
-        var data = JSON.stringify({"firstName": firstName,
+        var data = JSON.stringify({
+            "firstName": firstName,
             "lastName": lastName,
             "email": email,
-            "password" : password});
+            "password": password
+        });
         xhr.send(data);
-
     }
+
 
     regForm.addEventListener("submit", handleSubmit);
 

@@ -1,5 +1,7 @@
-package hu.pe.mik.timetable.domain;
+package hu.pe.mik.timetable.storage.calendar;
 
+import hu.pe.mik.timetable.storage.event.EventEntity;
+import hu.pe.mik.timetable.storage.user.UserEntity;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -7,17 +9,20 @@ import lombok.NoArgsConstructor;
 import javax.persistence.*;
 import java.util.List;
 
-@Table(name = "Calendars")
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
+@Table(name = "Calendars")
 public class CalendarEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "id")
     private Long id;
+
+    @Column(name = "owner_id")
+    private Long owner_id;
 
     @Column(name = "name")
     private String name;
