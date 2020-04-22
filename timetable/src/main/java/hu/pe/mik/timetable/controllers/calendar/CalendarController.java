@@ -1,4 +1,4 @@
-package hu.pe.mik.timetable.controllers;
+package hu.pe.mik.timetable.controllers.calendar;
 
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;

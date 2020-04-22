@@ -1,6 +1,6 @@
-package hu.pe.mik.timetable.controllers;
+package hu.pe.mik.timetable.controllers.user;
 
-import hu.pe.mik.timetable.domain.UserEntity;
+import hu.pe.mik.timetable.storage.user.UserEntity;
 import hu.pe.mik.timetable.repositories.UserRepository;
 import org.springframework.web.bind.annotation.*;
 
