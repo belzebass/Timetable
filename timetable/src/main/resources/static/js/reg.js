@@ -17,7 +17,7 @@ window.addEventListener('load', function () {
         console.log(passwordVerify);
 
         var xhr = new XMLHttpRequest();
-        var url = "http://localhost:8080/users/add";
+        var url = "http://localhost:8080/security/registration";
         xhr.open("POST", url, true);
         xhr.setRequestHeader("Content-Type", "application/json");
         xhr.onreadystatechange = function () {
@@ -35,7 +35,46 @@ window.addEventListener('load', function () {
         xhr.send(data);
     }
 
-
     regForm.addEventListener("submit", handleSubmit);
-
 });
+
+
+function doCheck() {
+    var matches = true;
+
+    var firstName = document.getElementById("firstName");
+    var lastName = document.getElementById("lastName");
+    var email = document.getElementById("email");
+    var emailVerify = document.getElementById("emailVerify");
+    var password = document.getElementById("password");
+    var passwordVerify = document.getElementById("passwordVerify");
+    if(email.value != emailVerify.value || password.value != passwordVerify.value
+        || email.value == '' || emailVerify.value == ''
+        || password.value == '' || passwordVerify.value == ''
+        || firstName.value == '' || lastName.value == '') {
+        matches = false;
+    }
+
+    document.getElementById("submitButton").disabled = !matches;
+
+    // var allFilled = true;
+    //
+    // var inputs = document.getElementsByTagName('input');
+    // for(var i=0; i<inputs.length; i++){
+    //     if(inputs[i].value == ''){
+    //         allFilled = false;
+    //         break;
+    //     }
+    // }
+    //
+    // document.getElementById("submitButton").disabled = !allFilled;
+}
+
+window.onload = function() {
+    document.getElementById("submitButton").disabled = true;
+    var inputs = document.getElementsByTagName('input');
+    for(var i=0; i<inputs.length; i++){
+        inputs[i].onkeyup = doCheck;
+        inputs[i].onblur = doCheck;
+    }
+}

@@ -24,12 +24,8 @@ public class UserController {
     }
 
     @PostMapping(value = "/add")
-    public void addUser(@RequestBody UserEntity entity,
-                        @RequestParam String emailVerify,
-                        @RequestParam String passwordVerify) {
+    public void addUser(@RequestBody UserEntity entity) {
         System.out.println("-----------------------------------------------------");
-        System.out.println(emailVerify);
-        System.out.println(passwordVerify);
         System.out.println(repository.save(entity));
     }
 }
