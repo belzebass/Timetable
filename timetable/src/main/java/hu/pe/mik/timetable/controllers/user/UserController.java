@@ -23,9 +23,4 @@ public class UserController {
         return repository.findAll();
     }
 
-    @PostMapping(value = "/add")
-    public void addUser(@RequestBody UserEntity entity) {
-        System.out.println("-----------------------------------------------------");
-        System.out.println(repository.save(entity));
-    }
 }

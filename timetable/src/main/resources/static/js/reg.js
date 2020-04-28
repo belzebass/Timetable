@@ -9,12 +9,6 @@ window.addEventListener('load', function () {
         var password = document.getElementById("password").value;
         var passwordVerify = document.getElementById("passwordVerify").value;
         e.preventDefault();
-        console.log(firstName);
-        console.log(lastName);
-        console.log(email);
-        console.log(emailVerify);
-        console.log(password);
-        console.log(passwordVerify);
 
         var xhr = new XMLHttpRequest();
         var url = "http://localhost:8080/security/registration";
