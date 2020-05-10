@@ -7,8 +7,9 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link type="text/css" href="/src/main/resources/frontend/static/css/styles.css" rel="stylesheet">
 
-    <title>Main Page</title>
+    <title>TimeTable</title>
 </head>
 <body>
 
@@ -22,16 +23,10 @@
         <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav">
                 <li class="nav-item active">
-                    <a class="nav-link" href="#">Link1</a>
+                    <a class="nav-link" href="#">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Link2</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Link3</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Link4</a>
+                    <a class="nav-link" href="#">Settings</a>
                 </li>
             </ul>
         </div>
@@ -41,6 +36,19 @@
         </form>
     </div>
 </nav>
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-4"></div>
+        <div class="col-sm-2">
+            <a class="btn btn-primary btn-block" type="button" href="/src/calender/samples/calendar/select.html" id="add">ADD TIMETABLE</a>
+        </div>
+        <div class="col-sm-2">
+            <a class="btn btn-primary btn-block" type="button" href="/src/calender/samples/calendar/select.html" id="add">SAVED TIMETABLE</a>
+        </div>
+        <div class="col-sm-4"></div>
+    </div>
+</div>
 
 <!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->

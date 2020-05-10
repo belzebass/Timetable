@@ -1,0 +1,8 @@
+{
+  "data": [
+      { "id": "2", "start_date": "2020-05-11 08:00:00", "end_date": "2020-05-11 08:20:00", "text": "Digitális számítás elmélete", "details": "Teszt\n"},
+      { "id": "3", "start_date": "2020-05-11 10:00:00", "end_date": "2020-05-11 11:15:00", "text": "Valószínűségszámítás", "details": "2. Zárthelyi\n"},
+      { "id": "4", "start_date": "2020-05-13 08:00:00", "end_date": "2020-05-13 09:30:00", "text": "Adatbázis-kezelés II.", "details": "2. Zárthelyi\n"},
+      { "id": "5", "start_date": "2020-05-13 17:00:00", "end_date": "2020-05-13 19:30:00", "text": "Szoftverfejlesztés", "details": "Workshop\n"}
+    ]
+}
